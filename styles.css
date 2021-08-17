@@ -1,0 +1,47 @@
+*{ /* 1° */
+    padding: 0;
+    margin: 0;
+}
+
+.gameboard{ /* 2° */
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+#dinosaur{/* 3 */
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    top: 150px; 
+}
+
+/* 8°:creamos 1 clase q lo q hace es agregar la animacion jump. Despues corremos una funcion js q añada esa clase al dino para q salte, y luego se remueve esa clase, x lo q deja de saltar */
+.jumpAnimation{
+    animation: jump 500ms;
+}
+
+#block{/* 4 */
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    position: relative;
+    top: 130px;
+    left: 480px;
+    animation: block 1s infinite linear; /* 6°:agrego la animacion */
+}
+
+/* 5°:crear animacion para q se mueva el bloque */
+@keyframes block{
+    0%{left: 480px;}
+    100%{left: -40px;}
+}
+
+/* 7°: crear animacion para q el dino salte */
+@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 100px}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
